@@ -1,25 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Pan's</title>
      <style>
-       h1 {text-align:center;}
+          h1 {
+               text-align: center;
+          }
+
+          #links {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               width: 100%;
+               height: 200px;
+          }
+
+          .link {
+               margin-left: 25px;
+               margin-right: 25px;
+          }
      </style>
 </head>
+
 <body>
-     <h1>Hi!</h1>
-     <p><h1>ich bin Pan.</h1></p>
+     <div>
+          <h1>Hi!</h1>
+          <p>
+          <h1>ich bin Pan.</h1>
+          </p>
+     </div>
+     <div id="links">
+          <a class="link" href="https://olgapan.de/nggame">My Game</a>
+          <a class="link" href="https://github.com/panzhao12">My GitHub</a>
+     </div>
+
 
      <script src="https://github.com/Cognigy/WebchatWidget/releases/download/v2.20.0/webchat.js"></script>
 
      <!-- Initialize the Webchat towards a Cogngiy Endpoint via initWebchat() -->
      <script>
-       initWebchat(
-         "https://endpoint-trial.cognigy.ai/b9ec9f1a72d30cbb404e8e5d7054e0593f6357dbb6f49e89c4713e630b7798c4"
-       );
+          initWebchat(
+               "https://endpoint-trial.cognigy.ai/b9ec9f1a72d30cbb404e8e5d7054e0593f6357dbb6f49e89c4713e630b7798c4"
+          );
      </script>
 </body>
-</html>
