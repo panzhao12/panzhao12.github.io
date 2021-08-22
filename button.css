@@ -20,7 +20,18 @@
   }
 }
 
+h1 {
+  font-weight: bold;
+  font-size: 46px;
+}
+
+.links {
+  margin-left: 0.8em;
+}
+
 .link {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   padding: 0.35em 0.6em;
   text-align: center;
   text-decoration: none;
