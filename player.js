@@ -3,6 +3,9 @@
 		widget = SC.Widget(el);
 	window._total_duration = 0;
 	widget.bind(SC.Widget.Events.READY, function () {
+		//set default volume
+		widget.setVolume(30); 
+
 		widget.getDuration(function (duration) {
 			var seconds = duration / (1000),
 				minutes = Math.floor(seconds / 60);
@@ -58,4 +61,8 @@
 			this.className = "toggle-play play";
 		}
 	});
+
+	document.getElementById('volume').addEventListener('input', function() {
+		widget.setVolume(this.value);
+	})
 })();
