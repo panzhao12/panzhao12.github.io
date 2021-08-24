@@ -12,10 +12,6 @@
 </head>
 
 <body>
-     <div class="color-range">
-          <input class="color-bar" type="range" min="0" max="100" value="12" title="" style="color: rgb(0, 119, 255);">
-     </div>
-
      <section class="olga">
           <div class="slice slice-1"></div>
           <div class="slice slice-2"></div>
@@ -45,7 +41,10 @@
           <div class="slice slice-26"></div>
           <div class="slice slice-27"></div>
           <div class="slice slice-28"></div>
-          <div class="slice slice-29"></div>
+          <!-- <div class="slice slice-29"></div> -->
+          <div class="slice-29 color-range">
+               <input class="color-bar" type="range" min="0" max="100" value="0" title="" style="color: rgb(0, 119, 255);">
+          </div>
           <div class="slice slice-30"></div>
           <div class="slice slice-31"></div>
           <div class="slice slice-32"></div>
@@ -73,6 +72,7 @@
 
      <script type="text/javascript" src="https://w.soundcloud.com/player/api.js"></script>
      <script type="text/javascript" src="player.js"></script>
+     <script type="text/javascript" src="colorbar.js"></script>
 </body>
 
 </html>

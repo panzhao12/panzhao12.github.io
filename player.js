@@ -65,5 +65,5 @@
 	document.getElementById('volume-bar').addEventListener('input', function() {
 		widget.setVolume(this.value);
 		document.getElementById('volume').innerHTML = ~~this.value + '%';
-	})
+	});
 })();

@@ -5,6 +5,7 @@ body {
 }
 
 .olga {
+  margin-top: 3%;
   min-height: 400px;
 }
 
@@ -211,10 +212,11 @@ body {
 }
 
 .olga .slice-29 {
-  width: 89px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
+  width: 100px;
+  height: 23px;
   margin: 0 calc(((100% - 1140px) / 2) + 32px) 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .olga .slice-30 {
