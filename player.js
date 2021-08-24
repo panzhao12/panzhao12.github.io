@@ -21,15 +21,15 @@
 				minutes = Math.floor(seconds / 60);
 			seconds = Math.floor(seconds % 60);
 			document.getElementById('position').innerHTML = (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds);
-			document.getElementById('progress').value = (position / window._total_duration) * 100;
+			document.getElementById('player-progress').value = (position / window._total_duration) * 100;
 		});
 	});
 
-	document.getElementById('progress').addEventListener('mousedown', function () {
+	document.getElementById('player-progress').addEventListener('mousedown', function () {
 		widget.unbind(SC.Widget.Events.PLAY_PROGRESS);
 	});
 
-	document.getElementById('progress').addEventListener('mouseup', function () {
+	document.getElementById('player-progress').addEventListener('mouseup', function () {
 
 		widget.bind(SC.Widget.Events.PLAY_PROGRESS, function () {
 			widget.getPosition(function (position) {
@@ -37,12 +37,12 @@
 					minutes = Math.floor(seconds / 60);
 				seconds = Math.floor(seconds % 60);
 				document.getElementById('position').innerHTML = (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds);
-				document.getElementById('progress').value = (position / window._total_duration) * 100;
+				document.getElementById('player-progress').value = (position / window._total_duration) * 100;
 			});
 		});
 	});
 
-	document.getElementById('progress').addEventListener('input', function () {
+	document.getElementById('player-progress').addEventListener('input', function () {
 		var newPos = (this.value * window._total_duration) / 100;
 		var seconds = newPos / (1000),
 			minutes = Math.floor(seconds / 60);
@@ -62,7 +62,8 @@
 		}
 	});
 
-	document.getElementById('volume').addEventListener('input', function() {
+	document.getElementById('volume-bar').addEventListener('input', function() {
 		widget.setVolume(this.value);
+		document.getElementById('volume').innerHTML = ~~this.value + '%';
 	})
 })();

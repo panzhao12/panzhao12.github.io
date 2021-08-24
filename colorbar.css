@@ -1,0 +1,158 @@
+.color-range {
+     margin-top: 2%;
+     margin-bottom: 2%;
+     width: 40%;
+}
+
+.color-bar {
+     position: relative;
+     z-index: 1;
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     width: 30%;
+     max-width: 320px;
+     display: block;
+     outline: none;
+     margin: 0 auto;
+     height: 4em;
+     font-size: 12px;
+     transition: color 0.05s linear, -webkit-filter 0.5s ease-in-out;
+     transition: color 0.05s linear, filter 0.5s ease-in-out;
+     transition: color 0.05s linear, filter 0.5s ease-in-out, -webkit-filter 0.5s ease-in-out
+   }
+   
+   .color-bar:focus {
+     outline: none
+   }
+   
+   .color-bar:active,.color-bar:hover:active {
+     cursor: grabbing;
+     cursor: -webkit-grabbing
+   }
+   
+   .color-bar::-webkit-slider-runnable-track {
+     -webkit-appearance: none;
+     appearance: none;
+     outline: none !important;
+     background-color: rgba(0,0,0,0.1);
+     border-radius: 0.5em;
+     height: 0.5em;
+     background: linear-gradient(to right, black, red, #ff0, lime, cyan, blue, #f0f, red)
+   }
+   
+   .color-bar::-moz-range-track {
+     -moz-appearance: none;
+     appearance: none;
+     outline: none !important;
+     background-color: rgba(0,0,0,0.1);
+     border-radius: 0.5em;
+     height: 0.5em;
+     background: linear-gradient(to right, red, #ff0, lime, cyan, blue, #f0f, red)
+   }
+   
+   .color-bar::-ms-track {
+     outline: none !important;
+     appearance: none;
+     background-color: rgba(0,0,0,0.1);
+     border-radius: 0.5em;
+     height: 0.5em;
+     background: linear-gradient(to right, red, #ff0, lime, cyan, blue, #f0f, red)
+   }
+   
+   .color-bar:disabled {
+     -webkit-filter: grayscale(100) opacity(0.25);
+     filter: grayscale(100) opacity(0.25);
+     pointer-events: none
+   }
+   
+   .color-bar::-webkit-slider-thumb {
+     height: 3em;
+     width: 3em;
+     margin-top: -1.2em;
+     border-radius: 2em;
+     -webkit-appearance: none;
+     appearance: none;
+     background: white;
+     border: 0.4em solid currentColor;
+     cursor: pointer;
+     cursor: move;
+     cursor: grab;
+     cursor: -webkit-grab;
+     transition: box-shadow 0.2s ease-in-out, transform 0.1s ease-in-out;
+     box-shadow: 0 0.1em 0.1em rgba(0,0,0,0.05)
+   }
+   
+   .color-bar::-webkit-slider-thumb:active,.color-bar::-webkit-slider-thumb:hover:active {
+     cursor: grabbing;
+     cursor: -webkit-grabbing;
+     transform: scale(0.975);
+     box-shadow: 0 0 1px rgba(0,0,0,0.1);
+     border: 1.5em solid currentColor
+   }
+   
+   .color-bar::-webkit-slider-thumb:hover {
+     transform: scale(1.1);
+     box-shadow: 0 0.4em 1em rgba(0,0,0,0.15)
+   }
+   
+   .color-bar::-moz-range-thumb {
+     height: 3em;
+     width: 3em;
+     margin-top: -1.2em;
+     border-radius: 2em;
+     -moz-appearance: none;
+     appearance: none;
+     background: white;
+     box-sizing: border-box;
+     border: 0.4em solid currentColor;
+     cursor: pointer;
+     cursor: move;
+     cursor: grab;
+     cursor: -webkit-grab;
+     transition: box-shadow 0.2s ease-in-out, transform 0.1s ease-in-out;
+     box-shadow: 0 0.1em 0.1em rgba(0,0,0,0.05)
+   }
+   
+   .color-bar::-moz-range-thumb:active,.color-bar::-moz-range-thumb:hover:active {
+     cursor: grabbing;
+     box-sizing: border-box;
+     cursor: -webkit-grabbing;
+     transform: none;
+     box-shadow: 0 0 1px rgba(0,0,0,0.1);
+     border: 0.4em solid currentColor
+   }
+   
+   .color-bar::-moz-range-thumb:hover {
+     transform: scale(1.1);
+     box-shadow: 0 0.4em 1em rgba(0,0,0,0.15)
+   }
+   
+   .color-bar::-ms-thumb {
+     height: 2.4em;
+     width: 2.4em;
+     margin-top: 0;
+     border-radius: 2em;
+     appearance: none;
+     background: white;
+     border: 0.4em solid currentColor;
+     cursor: pointer;
+     cursor: move;
+     cursor: grab;
+     cursor: -webkit-grab;
+     transition: box-shadow 0.2s ease-in-out, transform 0.1s ease-in-out;
+     box-shadow: 0 0.1em 0.1em rgba(0,0,0,0.05)
+   }
+   
+   .color-bar::-ms-thumb:active,.color-bar::-ms-thumb:hover:active {
+     cursor: grabbing;
+     cursor: -webkit-grabbing;
+     transform: none;
+     box-shadow: 0 0 1px rgba(0,0,0,0.1);
+     border: 0.4em solid currentColor
+   }
+   
+   .color-bar::-ms-thumb:hover {
+     transform: scale(1.1);
+     box-shadow: 0 0.4em 1em rgba(0,0,0,0.15)
+   }

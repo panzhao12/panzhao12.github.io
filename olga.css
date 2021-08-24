@@ -1,8 +1,15 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .olga {
   min-height: 400px;
 }
 
 .slice {
+  transition: all 1.1s ease-in-out;
   border-radius: 10px;
   background: black;
 }
@@ -274,4 +281,7 @@
   margin: 0 calc(((100% - 1140px) / 2) + -79px) 42px auto;
 }
 
+.olga.slice {
+  transition: all 1.1s ease-in-out;
+}
 
