@@ -4,13 +4,13 @@ body {
   align-items: center;
 }
 
-.olga {
+#olga {
   margin-top: 3%;
   min-height: 400px;
 }
 
 .slice {
-  transition: all 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   border-radius: 10px;
   background: black;
 }
@@ -20,203 +20,203 @@ body {
   transform: scale(1.2);
 }
 
-.olga .slice-1 {
+.slice-1 {
   width: 89px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: 43px auto 0 calc(((100% - 1140px) / 2) + -3px);
 }
 
-.olga .slice-2 {
+.slice-2 {
   width: 89px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: -63px auto 0 calc(((100% - 1140px) / 2) + 86px);
 }
 
-.olga .slice-3 {
+.slice-3 {
   width: 85px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: -64px auto 0 calc(((100% - 1140px) / 2) + 272px);
 }
 
-.olga .slice-4 {
+.slice-4 {
   width: 88px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: -63px calc(((100% - 1140px) / 2) + 320px) 0 auto;
 }
 
-.olga .slice-5 {
+.slice-5 {
   width: 86px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: -63px calc(((100% - 1140px) / 2) + 409px) 0 auto;
 }
 
-.olga .slice-6 {
+.slice-6 {
   width: 89px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: 0 auto 0 calc(((100% - 1140px) / 2) + -53px);
 }
 
-.olga .slice-7 {
+.slice-7 {
   width: 89px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: -63px auto 0 calc(((100% - 1140px) / 2) + 135px);
 }
 
-.olga .slice-8 {
+.slice-8 {
   width: 85px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: -64px auto 0 calc(((100% - 1140px) / 2) + 272px);
 }
 
-.olga .slice-9 {
+.slice-9 {
   width: 87px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: -84px calc(((100% - 1140px) / 2) + 494px) 0 auto;
 }
 
-.olga .slice-10 {
+.slice-10 {
   width: 89px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: 21px auto 0 calc(((100% - 1140px) / 2) + -78px);
 }
 
-.olga .slice-11 {
+.slice-11 {
   width: 89px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: -63px auto 0 calc(((100% - 1140px) / 2) + 162px);
 }
 
-.olga .slice-12 {
+.slice-12 {
   width: 85px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: -64px auto 0 calc(((100% - 1140px) / 2) + 272px);
 }
 
-.olga .slice-13 {
+.slice-13 {
   width: 89px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: 1px auto 0 calc(((100% - 1140px) / 2) + -53px);
 }
 
-.olga .slice-14 {
+.slice-14 {
   width: 89px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: -63px auto 0 calc(((100% - 1140px) / 2) + 135px);
 }
 
-.olga .slice-15 {
+.slice-15 {
   width: 85px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: -64px auto 0 calc(((100% - 1140px) / 2) + 272px);
 }
 
-.olga .slice-16 {
+.slice-16 {
   width: 88px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: -146px calc(((100% - 1140px) / 2) + 515px) 0 auto;
 }
 
-.olga .slice-17 {
+.slice-17 {
   width: 88px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: 0 calc(((100% - 1140px) / 2) + 515px) 0 auto;
 }
 
-.olga .slice-18 {
+.slice-18 {
   width: 89px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: 21px auto 0 calc(((100% - 1140px) / 2) + -3px);
 }
 
-.olga .slice-19 {
+.slice-19 {
   width: 89px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: -63px auto 0 calc(((100% - 1140px) / 2) + 86px);
 }
 
-.olga .slice-20 {
+.slice-20 {
   width: 85px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: -63px auto 0 calc(((100% - 1140px) / 2) + 272px);
 }
 
-.olga .slice-21 {
+.slice-21 {
   width: 85px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: -63px auto 0 calc(((100% - 1140px) / 2) + 357px);
 }
 
-.olga .slice-22 {
+.slice-22 {
   width: 87px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: -63px auto 0 calc(((100% - 1140px) / 2) + 442px);
 }
 
-.olga .slice-23 {
+.slice-23 {
   width: 86px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: -63px calc(((100% - 1140px) / 2) + 316px) 0 auto;
 }
 
-.olga .slice-24 {
+.slice-24 {
   width: 87px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: -84px calc(((100% - 1140px) / 2) + 494px) 0 auto;
 }
 
-.olga .slice-25 {
+.slice-25 {
   width: 88px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: -42px calc(((100% - 1140px) / 2) + 405px) 0 auto;
 }
 
-.olga .slice-26 {
+.slice-26 {
   width: 89px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: -126px calc(((100% - 1140px) / 2) + 258px) 0 auto;
 }
 
-.olga .slice-27 {
+.slice-27 {
   width: 89px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: -126px calc(((100% - 1140px) / 2) + 258px) 0 auto;
 }
 
-.olga .slice-28 {
+.slice-28 {
   width: 86px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: -63px calc(((100% - 1140px) / 2) + 347px) 0 auto;
 }
 
-.olga .slice-29 {
+.slice-29 {
   width: 100px;
   height: 23px;
   margin: 0 calc(((100% - 1140px) / 2) + 32px) 0 auto;
@@ -224,7 +224,7 @@ body {
   margin-bottom: 20px;
 }
 
-.olga .slice-30 {
+.slice-30 {
   width: 89px;
   height: 63px;
   background-image: none;
@@ -232,56 +232,56 @@ body {
   margin: -252px calc(((100% - 1140px) / 2) + 36px) 0 auto;
 }
 
-.olga .slice-31 {
+.slice-31 {
   width: 88px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: 0 calc(((100% - 1140px) / 2) + 96px) 0 auto;
 }
 
-.olga .slice-32 {
+.slice-32 {
   width: 89px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: 0 calc(((100% - 1140px) / 2) + 132px) 0 auto;
 }
 
-.olga .slice-33 {
+.slice-33 {
   width: 89px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: 0 calc(((100% - 1140px) / 2) + 151px) 0 auto;
 }
 
-.olga .slice-34 {
+.slice-34 {
   width: 89px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: 0 calc(((100% - 1140px) / 2) + 151px) 0 auto;
 }
 
-.olga .slice-35 {
+.slice-35 {
   width: 88px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: -252px calc(((100% - 1140px) / 2) + -29px) 0 auto;
 }
 
-.olga .slice-36 {
+.slice-36 {
   width: 89px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: 0 calc(((100% - 1140px) / 2) + -65px) 0 auto;
 }
 
-.olga .slice-37 {
+.slice-37 {
   width: 89px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
   margin: 0 calc(((100% - 1140px) / 2) + -79px) 0 auto;
 }
 
-.olga .slice-38 {
+.slice-38 {
   width: 89px;
   height: 63px;
   box-shadow: 0 2px 8px 0 rgba(128,128,128,1);

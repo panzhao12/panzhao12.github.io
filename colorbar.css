@@ -4,7 +4,7 @@
      width: 40%;
 } */
 
-.color-bar {
+#color-bar {
      position: relative;
      z-index: 1;
      -webkit-appearance: none;
@@ -22,16 +22,16 @@
      transition: color 0.05s linear, filter 0.5s ease-in-out, -webkit-filter 0.5s ease-in-out
    }
    
-   .color-bar:focus {
+   #color-bar:focus {
      outline: none
    }
    
-   .color-bar:active,.color-bar:hover:active {
+   #color-bar:active,#color-bar:hover:active {
      cursor: grabbing;
      cursor: -webkit-grabbing
    }
    
-   .color-bar::-webkit-slider-runnable-track {
+   #color-bar::-webkit-slider-runnable-track {
      -webkit-appearance: none;
      appearance: none;
      outline: none !important;
@@ -41,7 +41,7 @@
      background: linear-gradient(to right, black, red, #ff0, lime, cyan, blue, #f0f, red)
    }
    
-   .color-bar::-moz-range-track {
+   #color-bar::-moz-range-track {
      -moz-appearance: none;
      appearance: none;
      outline: none !important;
@@ -51,7 +51,7 @@
      background: linear-gradient(to right, black, red, #ff0, lime, cyan, blue, #f0f, red)
    }
    
-   .color-bar::-ms-track {
+   #color-bar::-ms-track {
      outline: none !important;
      appearance: none;
      background-color: rgba(0,0,0,0.1);
@@ -60,13 +60,13 @@
      background: linear-gradient(to right, black, red, #ff0, lime, cyan, blue, #f0f, red)
    }
    
-   .color-bar:disabled {
+   #color-bar:disabled {
      -webkit-filter: grayscale(100) opacity(0.25);
      filter: grayscale(100) opacity(0.25);
      pointer-events: none
    }
    
-   .color-bar::-webkit-slider-thumb {
+   #color-bar::-webkit-slider-thumb {
      height: 2em;
      width: 2em;
      /* margin-top: -1.2em; */
@@ -83,7 +83,7 @@
      box-shadow: 0 0.1em 0.1em rgba(0,0,0,0.05)
    }
    
-   .color-bar::-webkit-slider-thumb:active,.color-bar::-webkit-slider-thumb:hover:active {
+   #color-bar::-webkit-slider-thumb:active,#color-bar::-webkit-slider-thumb:hover:active {
      cursor: grabbing;
      cursor: -webkit-grabbing;
      transform: scale(0.975);
@@ -91,12 +91,12 @@
      border: 0.3em solid currentColor
    }
    
-   .color-bar::-webkit-slider-thumb:hover {
+   #color-bar::-webkit-slider-thumb:hover {
      transform: scale(1.1);
      box-shadow: 0 0.4em 1em rgba(0,0,0,0.15)
    }
    
-   .color-bar::-moz-range-thumb {
+   #color-bar::-moz-range-thumb {
      height: 3em;
      width: 3em;
      margin-top: -1.2em;
@@ -114,7 +114,7 @@
      box-shadow: 0 0.1em 0.1em rgba(0,0,0,0.05)
    }
    
-   .color-bar::-moz-range-thumb:active,.color-bar::-moz-range-thumb:hover:active {
+   #color-bar::-moz-range-thumb:active,#color-bar::-moz-range-thumb:hover:active {
      cursor: grabbing;
      box-sizing: border-box;
      cursor: -webkit-grabbing;
@@ -123,12 +123,12 @@
      border: 0.4em solid currentColor
    }
    
-   .color-bar::-moz-range-thumb:hover {
+   #color-bar::-moz-range-thumb:hover {
      transform: scale(1.1);
      box-shadow: 0 0.4em 1em rgba(0,0,0,0.15)
    }
    
-   .color-bar::-ms-thumb {
+   #color-bar::-ms-thumb {
      height: 2.4em;
      width: 2.4em;
      margin-top: 0;
@@ -144,7 +144,7 @@
      box-shadow: 0 0.1em 0.1em rgba(0,0,0,0.05)
    }
    
-   .color-bar::-ms-thumb:active,.color-bar::-ms-thumb:hover:active {
+   #color-bar::-ms-thumb:active,#color-bar::-ms-thumb:hover:active {
      cursor: grabbing;
      cursor: -webkit-grabbing;
      transform: none;
@@ -152,7 +152,7 @@
      border: 0.4em solid currentColor
    }
    
-   .color-bar::-ms-thumb:hover {
+   #color-bar::-ms-thumb:hover {
      transform: scale(1.1);
      box-shadow: 0 0.4em 1em rgba(0,0,0,0.15)
    }
