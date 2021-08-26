@@ -25,6 +25,10 @@
 		});
 	});
 
+	widget.bind(SC.Widget.Events.FINISH, () => {
+		document.getElementById('toggle-play').className = "toggle-play play";
+	})
+
 	document.getElementById('player-progress').addEventListener('mousedown', function () {
 		widget.unbind(SC.Widget.Events.PLAY_PROGRESS);
 	});
@@ -57,7 +61,7 @@
 			widget.play();
 			this.className = "toggle-play pause";
 		} else {
-			widget.pause();
+			widget.pause();widget.
 			this.className = "toggle-play play";
 		}
 	});
