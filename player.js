@@ -61,7 +61,7 @@
 			widget.play();
 			this.className = "toggle-play pause";
 		} else {
-			widget.pause();widget.
+			widget.pause();
 			this.className = "toggle-play play";
 		}
 	});
