@@ -2,6 +2,7 @@
 		-webkit-appearance: none;
 		margin: 1em 0;
 		width: 100%;
+		transition: all 0.2s;
 	}
 
 	.progress-bar input[type=range]:focus {
@@ -116,6 +117,10 @@
 		bottom: 6%;
 		padding: 0 4em;
 		box-sizing: border-box;
+	}
+
+	.aus .progress-bar input[type=range] {
+		background-color: #242526;
 	}
 	
 	#volume-bar {
