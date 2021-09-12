@@ -279,7 +279,7 @@ h1 {
 
 @media screen and (max-width: 760px) {
   .main {
-    margin-top: 30%;
+    padding-top: 30%;
   }
 
   .olga h1 {
