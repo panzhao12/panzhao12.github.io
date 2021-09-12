@@ -46,7 +46,6 @@ h1 {
 .link:hover {
   background-color: black;
   color: #fff;
-  border-bottom: 4px solid black;
 }
 
 .link:hover:before {
