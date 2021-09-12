@@ -1,25 +1,3 @@
-@-webkit-keyframes sheen {
-  0% {
-    -webkit-transform: skewY(-45deg) translateX(0);
-            transform: skewY(-45deg) translateX(0);
-  }
-  100% {
-    -webkit-transform: skewY(-45deg) translateX(12.5em);
-            transform: skewY(-45deg) translateX(12.5em);
-  }
-}
-
-@keyframes sheen {
-  0% {
-    -webkit-transform: skewY(-45deg) translateX(0);
-            transform: skewY(-45deg) translateX(0);
-  }
-  100% {
-    -webkit-transform: skewY(-45deg) translateX(12.5em);
-            transform: skewY(-45deg) translateX(12.5em);
-  }
-}
-
 h1 {
   font-weight: bold;
   font-size: 46px;
