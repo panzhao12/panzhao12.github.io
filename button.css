@@ -29,6 +29,14 @@ h1 {
   margin-left: 0.8em;
 }
 
+.link.olga-btn {
+  background-color: #b33c2c;
+}
+
+.link.olga-btn:hover {
+  background-color: #b33c2c;
+}
+
 .link {
   -ms-flex-item-align: end;
       align-self: flex-end;

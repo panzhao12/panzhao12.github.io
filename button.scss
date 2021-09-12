@@ -18,6 +18,14 @@ h1 {
   margin-left: 0.8em;
 }
 
+.link.olga-btn {
+  background-color: rgb(179, 60, 44);
+  &:hover {
+    background-color: rgb(179, 60, 44);
+  }
+  // font-size: 40px;
+}
+
 .link {
   align-self: flex-end;
   padding: 0.35em 0.6em;
