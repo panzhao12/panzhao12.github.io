@@ -1,4 +1,11 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
 body {
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,297 +17,290 @@ body.aus {
 }
 
 #switch {
-  width: 3em;
-  height: 3em;
+  width: 3rem;
+  height: 3rem;
   border: none;
   top: 3%;
   right: 3%;
   position: absolute;
-
   background: url("./hurray.svg") center no-repeat;
 }
 
-#olga {
-  margin-top: 3%;
-  min-height: 400px;
+h1 {
+  opacity: 0;
+  font-size: 27vw;
+  margin: 0;
+  line-height: 1;
+  padding: 0;
+  display: inline-block;
+}
+
+.olga {
+  position: relative;
+  backface-visibility: hidden;
+  perspective: 500px;
+  /* margin: 2vw 0; */
+  display: inline-block;
+}
+
+.olga-slices {
+  position: absolute;
+  display: flex;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.o, .l, .g, .a {
+  width: 25%;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
 }
 
 .slice {
+  position: absolute;
   transition: transform 0.2s ease-in-out;
-  border-radius: 10px;
+  border-radius: 0.5rem;
   background: black;
+  width: 6.3%;
+  padding-top: 4.5%;
+  box-shadow: 0 2px 8px 0 rgba(128, 128, 128, 1);
+  cursor: pointer;
 }
 
 .slice:hover {
   z-index: 1;
   transform: scale(1.2);
+  background: url("./hurray.svg") center no-repeat;
 }
 
 .slice-1 {
-  width: 89px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: 43px auto 0 calc(((100% - 1140px) / 2) + -3px);
+  left: 7%;
+  top: 17%;
 }
 
 .slice-2 {
-  width: 89px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: -63px auto 0 calc(((100% - 1140px) / 2) + 86px);
+  left: 13%;
+  top: 17%;
 }
 
 .slice-3 {
-  width: 85px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: -64px auto 0 calc(((100% - 1140px) / 2) + 272px);
+  left: 3%;
+  top: 30%;
 }
 
 .slice-4 {
-  width: 88px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: -63px calc(((100% - 1140px) / 2) + 320px) 0 auto;
+  left: 17%;
+  top: 30%;
 }
 
 .slice-5 {
-  width: 86px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: -63px calc(((100% - 1140px) / 2) + 409px) 0 auto;
+  left: 1%;
+  top: 43%;
 }
 
 .slice-6 {
-  width: 89px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: 0 auto 0 calc(((100% - 1140px) / 2) + -53px);
+  left: 19%;
+  top: 43%;
 }
 
 .slice-7 {
-  width: 89px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: -63px auto 0 calc(((100% - 1140px) / 2) + 135px);
+  left: 3%;
+  top: 56%;
 }
 
 .slice-8 {
-  width: 85px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: -64px auto 0 calc(((100% - 1140px) / 2) + 272px);
+  left: 17%;
+  top: 56%;
 }
 
 .slice-9 {
-  width: 87px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: -84px calc(((100% - 1140px) / 2) + 494px) 0 auto;
+  left: 7%;
+  top: 69%;
 }
 
 .slice-10 {
-  width: 89px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: 21px auto 0 calc(((100% - 1140px) / 2) + -78px);
+  left: 13%;
+  top: 69%;
 }
 
 .slice-11 {
-  width: 89px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: -63px auto 0 calc(((100% - 1140px) / 2) + 162px);
+  left: 29%;
+  top: 17%;
 }
 
 .slice-12 {
-  width: 85px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: -64px auto 0 calc(((100% - 1140px) / 2) + 272px);
+  left: 29%;
+  top: 30%;
 }
 
 .slice-13 {
-  width: 89px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: 1px auto 0 calc(((100% - 1140px) / 2) + -53px);
+  left: 29%;
+  top: 43%;
 }
 
 .slice-14 {
-  width: 89px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: -63px auto 0 calc(((100% - 1140px) / 2) + 135px);
+  left: 29%;
+  top: 56%;
 }
 
 .slice-15 {
-  width: 85px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: -64px auto 0 calc(((100% - 1140px) / 2) + 272px);
+  left: 29%;
+  top: 69%;
 }
 
 .slice-16 {
-  width: 88px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: -146px calc(((100% - 1140px) / 2) + 515px) 0 auto;
+  left: 35%;
+  top: 69%;
 }
 
 .slice-17 {
-  width: 88px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: 0 calc(((100% - 1140px) / 2) + 515px) 0 auto;
+  left: 41%;
+  top: 69%;
 }
 
 .slice-18 {
-  width: 89px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: 21px auto 0 calc(((100% - 1140px) / 2) + -3px);
+  left: 64%;
+  top: 17%;
 }
 
 .slice-19 {
-  width: 89px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: -63px auto 0 calc(((100% - 1140px) / 2) + 86px);
+  left: 58%;
+  top: 17%;
 }
 
 .slice-20 {
-  width: 85px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: -63px auto 0 calc(((100% - 1140px) / 2) + 272px);
+  left: 52%;
+  top: 25%;
 }
 
 .slice-21 {
-  width: 85px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: -63px auto 0 calc(((100% - 1140px) / 2) + 357px);
+  left: 51%;
+  top: 38%;
 }
 
 .slice-22 {
-  width: 87px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: -63px auto 0 calc(((100% - 1140px) / 2) + 442px);
+  left: 51%;
+  top: 51%;
 }
 
 .slice-23 {
-  width: 86px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: -63px calc(((100% - 1140px) / 2) + 316px) 0 auto;
+  left: 53%;
+  top: 63%;
 }
 
 .slice-24 {
-  width: 87px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: -84px calc(((100% - 1140px) / 2) + 494px) 0 auto;
+  left: 58%;
+  top: 69%;
 }
 
 .slice-25 {
-  width: 88px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: -42px calc(((100% - 1140px) / 2) + 405px) 0 auto;
+  left: 64%;
+  top: 69%;
 }
 
 .slice-26 {
-  width: 89px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: -126px calc(((100% - 1140px) / 2) + 258px) 0 auto;
+  left: 68%;
+  top: 56%;
 }
 
 .slice-27 {
-  width: 89px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: -126px calc(((100% - 1140px) / 2) + 258px) 0 auto;
+  left: 68%;
+  top: 43%;
 }
 
 .slice-28 {
-  width: 86px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: -63px calc(((100% - 1140px) / 2) + 347px) 0 auto;
+  left: 62%;
+  top: 43%;
 }
 
-.slice-29 {
-  width: 100px;
-  height: 23px;
-  margin: 0 calc(((100% - 1140px) / 2) + 32px) 0 auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+.slice-29.color-range {
+  left: 84%;
+  top: 58%;
+  width: 8%;
+  padding-top: 0;
+}
+
+.slice-29:hover {
+  transform: unset;
 }
 
 .slice-30 {
-  width: 89px;
-  height: 63px;
-  background-image: none;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: -252px calc(((100% - 1140px) / 2) + 36px) 0 auto;
+  left: 85%;
+  top: 17%;
 }
 
 .slice-31 {
-  width: 88px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: 0 calc(((100% - 1140px) / 2) + 96px) 0 auto;
+  left: 81%;
+  top: 30%;
 }
 
 .slice-32 {
-  width: 89px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: 0 calc(((100% - 1140px) / 2) + 132px) 0 auto;
+  left: 89%;
+  top: 30%;
 }
 
 .slice-33 {
-  width: 89px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: 0 calc(((100% - 1140px) / 2) + 151px) 0 auto;
+  left: 78%;
+  top: 43%;
 }
 
 .slice-34 {
-  width: 89px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: 0 calc(((100% - 1140px) / 2) + 151px) 0 auto;
+  left: 92%;
+  top: 43%;
 }
 
 .slice-35 {
-  width: 88px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: -252px calc(((100% - 1140px) / 2) + -29px) 0 auto;
+  left: 77%;
+  top: 56%;
 }
 
 .slice-36 {
-  width: 89px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: 0 calc(((100% - 1140px) / 2) + -65px) 0 auto;
+  left: 93%;
+  top: 56%;
 }
 
 .slice-37 {
-  width: 89px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: 0 calc(((100% - 1140px) / 2) + -79px) 0 auto;
+  left: 77%;
+  top: 69%;
 }
 
 .slice-38 {
-  width: 89px;
-  height: 63px;
-  box-shadow: 0 2px 8px 0 rgba(128,128,128,1);
-  margin: 0 calc(((100% - 1140px) / 2) + -79px) 42px auto;
+  left: 93%;
+  top: 69%;
 }
 
+@media screen and (max-width: 760px) {
+  body {
+    margin-top: 40%;
+  }
+
+  .olga h1 {
+    font-size: 30vw;
+  }
+
+  .slice {
+    border-radius: 0.125rem;
+  }
+
+  .player {
+    width: 95%;
+    margin-top: 12%;
+  }
+
+  .toggle-play {
+    width: 13% !important;
+  }
+
+  #title {
+    margin-top: 22% !important;
+    font-size: medium !important;
+  }
+
+}

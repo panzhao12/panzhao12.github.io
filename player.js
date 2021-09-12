@@ -13,6 +13,13 @@
 			document.getElementById('total').innerHTML = minutes + ':' + seconds;
 			window._total_duration = duration;
 		});
+
+		widget.bind(SC.Widget.Events.PLAY, function() {
+			// get information about currently playing sound
+			widget.getCurrentSound(function(currentSound) {
+			  console.log(currentSound);
+			});
+		});
 	});
 
 	widget.bind(SC.Widget.Events.PLAY_PROGRESS, function () {
