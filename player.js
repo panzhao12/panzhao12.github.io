@@ -109,6 +109,7 @@ function assignSoundToBlock(widget, finalList) {
 
 		blockElements[i].addEventListener('click', function () {
 			widget.skip(i);
+			widget.seekTo(0);
 			getDuration(widget);
 			console.log(finalList);
 			console.log(finalList[i]);
