@@ -68,7 +68,7 @@ h1 {
   position: absolute;
   transition: transform 0.2s ease-in-out;
   border-radius: 0.5rem;
-  background: black;
+  background-color: black;
   width: 6.3%;
   padding-top: 4.5%;
   box-shadow: 0 2px 8px 0 rgba(128, 128, 128, 1);

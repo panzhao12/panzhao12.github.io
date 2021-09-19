@@ -11,7 +11,7 @@ let colorbar = {
                //change color dynamically
                this.colorBar.style.color = this.colorBar.value == 0 ? 'black' : hsl;
                this.elements.slices.forEach(element => {
-                    element.style.background = this.colorBar.value == 0 ? 'black' : hsl;
+                    element.style.backgroundColor = this.colorBar.value == 0 ? 'black' : hsl;
                });
           }.bind(this))
      }
