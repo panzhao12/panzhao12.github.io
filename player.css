@@ -110,6 +110,7 @@
 	}
 
 	#title {
+		text-align: center;
 		margin-top: 8rem;
 		font-family: cursive;
 		font-size: 1.3rem;
