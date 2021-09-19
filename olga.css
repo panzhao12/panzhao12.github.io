@@ -304,4 +304,8 @@ h1 {
     font-size: medium !important;
   }
 
+  #color-bar {
+    font-size: 0.3em !important;
+  }
+
 }
