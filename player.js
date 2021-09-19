@@ -116,7 +116,7 @@ function assignSoundToBlock(widget, finalList) {
 			console.log(finalList[i].title);
 			document.getElementById('title').innerHTML = finalList[i].title;
 		});
-		blockElements[i].style.backgroundImage = `url('${ finalList[i].artwork_url }')`;
+		blockElements[i].style.background = `url('${ finalList[i].artwork_url }') center center no-repeat`;
 	}
 }
 
