@@ -112,7 +112,7 @@
 	#title {
 		margin-top: 8rem;
 		font-family: cursive;
-		font-size: large;
+		font-size: 1.3rem;
 	}
 
 	.progress-bar {
@@ -132,7 +132,7 @@
 		width: 15%;
 	}
 
-	#total, #position, #volume {
+	#duration, #position, #volume {
 		width: 4em;
 		text-align: center;
 	}

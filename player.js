@@ -124,7 +124,7 @@ function getDuration(widget) {
 		let seconds = duration / (1000),
 			minutes = Math.floor(seconds / 60);
 		seconds = Math.floor(seconds % 60);
-		document.getElementById('total').innerHTML = (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds);
+		document.getElementById('duration').innerHTML = (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds);
 		window._total_duration = duration;
 	});
 }
