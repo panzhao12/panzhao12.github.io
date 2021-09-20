@@ -24,7 +24,7 @@ body.aus {
   top: 3%;
   right: 3%;
   position: absolute;
-  background: url("./hurray.svg") center no-repeat;
+  background: url("./assets/hurray.svg") center no-repeat;
 }
 
 h1 {
@@ -78,7 +78,7 @@ h1 {
 .slice:hover {
   z-index: 1;
   transform: scale(1.2);
-  background: url("./hurray.svg") center no-repeat;
+  background: url("./assets/hurray.svg") center no-repeat;
 }
 
 .slice-1 {
