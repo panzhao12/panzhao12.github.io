@@ -3,21 +3,24 @@
 		widget = SC.Widget(el);
 	window._total_duration = 0;
 
+	let preSoundIndex = 0;
+	let blockElements = document.getElementsByClassName('slice');
+
 	//warm up
 	widget.bind(SC.Widget.Events.READY, function () {
+		console.log("Getting ready...");
 		//set default volume
 		widget.setVolume(30);
 
-		let finalList = [];
 		//get sound list and assign randomly one sound to each block
 		let count = 0;
 		let getList = setInterval(function () {
 			widget.getSounds((soundList) => {
-				finalList = [...soundList];
 				//when we get the last sound object or try 5 times, stop fetching
 				if (soundList[soundList.length - 1].title != undefined || count == 5) {
 					clearInterval(getList);
-					assignSoundToBlock(widget, finalList);
+					console.log(soundList);
+					assignSoundToBlock(widget, soundList, blockElements);
 				}
 			});
 			count++;
@@ -31,9 +34,16 @@
 
 	widget.bind(SC.Widget.Events.PLAY, function () {
 		document.getElementById('toggle-play').className = "toggle-play pause";
-		// get information of current sound
-		widget.getCurrentSound(function (currentSound) {
-			console.log(currentSound);
+		//highlight current sound block
+		console.log(preSoundIndex);
+		widget.getCurrentSoundIndex(currentSoundIndex => {
+			if(currentSoundIndex < blockElements.length) {
+				if(currentSoundIndex != preSoundIndex) {
+					document.getElementsByClassName(`slice-${ preSoundIndex + 1 }`)[0].classList.remove("current-sound");
+				}
+				document.getElementsByClassName(`slice-${ currentSoundIndex + 1 }`)[0].classList.add("current-sound");
+				preSoundIndex = currentSoundIndex;
+			}
 		});
 		setTitle(widget);
 		getDuration(widget);
@@ -50,7 +60,13 @@
 	});
 
 	widget.bind(SC.Widget.Events.FINISH, () => {
+		widget.seekTo(0);
 		document.getElementById('toggle-play').className = "toggle-play play";
+		widget.getCurrentSoundIndex(currentSoundIndex => {
+			console.log(currentSoundIndex)
+			document.getElementsByClassName(`slice-${ currentSoundIndex }`)[0].classList.remove("current-sound");
+		});
+		
 	})
 
 	document.getElementById('player-progress').addEventListener('mousedown', function () {
@@ -96,9 +112,8 @@
 	});
 })();
 
-function assignSoundToBlock(widget, finalList) {
+function assignSoundToBlock(widget, finalList, blockElements) {
 	// let randomList = [];
-	let blockElements = document.getElementsByClassName('slice');
 
 	for (let i = 0; i < blockElements.length; i++) {
 		// let randomNum = Math.floor(Math.random() * finalList.length);
@@ -111,9 +126,9 @@ function assignSoundToBlock(widget, finalList) {
 			widget.skip(i);
 			widget.seekTo(0);
 			getDuration(widget);
-			console.log(finalList);
 			console.log(finalList[i]);
 			console.log(finalList[i].title);
+			//set sound title
 			document.getElementById('title').innerHTML = finalList[i].title;
 		});
 		blockElements[i].style.background = `url('${ finalList[i].artwork_url }') center center no-repeat`;

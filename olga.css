@@ -75,10 +75,9 @@ h1 {
   cursor: pointer;
 }
 
-.slice:hover {
+.slice:hover, .current-sound {
   z-index: 1;
   transform: scale(1.2);
-  background: url("./assets/hurray.svg") center no-repeat;
 }
 
 .slice-1 {
