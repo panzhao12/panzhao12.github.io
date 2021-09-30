@@ -119,15 +119,13 @@ function assignSoundToBlock(widget, finalList, blockElements) {
 		// let randomNum = Math.floor(Math.random() * finalList.length);
 		// randomList.push(finalList[randomNum]);
 
-		//skip the color bar element
-		if (i == 28) { continue; }
-
 		blockElements[i].addEventListener('click', function () {
 			widget.skip(i);
 			widget.seekTo(0);
 			getDuration(widget);
 			console.log(finalList[i]);
 			console.log(finalList[i].title);
+			blockElements[i].classList.add("current-sound");
 			//set sound title
 			document.getElementById('title').innerHTML = finalList[i].title;
 		});

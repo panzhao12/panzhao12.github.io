@@ -64,7 +64,7 @@ h1 {
   width: 60%;
 }
 
-.slice {
+.slice, .color-range {
   position: absolute;
   transition: transform 0.2s ease-in-out;
   border-radius: 0.5rem;
@@ -220,58 +220,58 @@ h1 {
   top: 43%;
 }
 
-.slice-29.color-range {
+.color-range {
   left: 84%;
   top: 58%;
   width: 8%;
   padding-top: 0;
 }
 
-.slice-29:hover {
+.color-range:hover {
   transform: unset;
 }
 
-.slice-30 {
+.slice-29 {
   left: 85%;
   top: 17%;
 }
 
-.slice-31 {
+.slice-30 {
   left: 81%;
   top: 30%;
 }
 
-.slice-32 {
+.slice-31 {
   left: 89%;
   top: 30%;
 }
 
-.slice-33 {
+.slice-32 {
   left: 78%;
   top: 43%;
 }
 
-.slice-34 {
+.slice-33 {
   left: 92%;
   top: 43%;
 }
 
-.slice-35 {
+.slice-34 {
   left: 77%;
   top: 56%;
 }
 
-.slice-36 {
+.slice-35 {
   left: 93%;
   top: 56%;
 }
 
-.slice-37 {
+.slice-36 {
   left: 77%;
   top: 69%;
 }
 
-.slice-38 {
+.slice-37 {
   left: 93%;
   top: 69%;
 }
