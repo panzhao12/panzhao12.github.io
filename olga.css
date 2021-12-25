@@ -4,6 +4,7 @@ body, html {
   box-sizing: border-box;
   margin: 0;
   transition: all 0.2s;
+  background-color: #242526;
 }
 
 .main {
@@ -13,8 +14,8 @@ body, html {
   align-items: center;
 }
 
-body.aus {
-  background-color: #242526;
+body.on {
+  background-color: #ffffff;
 }
 
 #switch {
