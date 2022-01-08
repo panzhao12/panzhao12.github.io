@@ -19,7 +19,6 @@
 				//when we get the last sound object or try 5 times, stop fetching
 				if (soundList[soundList.length - 1].title != undefined || count == 5) {
 					clearInterval(getList);
-					console.log(soundList);
 					assignSoundToBlock(widget, soundList, blockElements);
 				}
 			});
@@ -35,7 +34,7 @@
 	widget.bind(SC.Widget.Events.PLAY, function () {
 		document.getElementById('toggle-play').className = "toggle-play pause";
 		//highlight current sound block
-		console.log(preSoundIndex);
+		// console.log(preSoundIndex);
 		widget.getCurrentSoundIndex(currentSoundIndex => {
 			if(currentSoundIndex < blockElements.length) {
 				if(currentSoundIndex != preSoundIndex) {
@@ -63,7 +62,6 @@
 		widget.seekTo(0);
 		document.getElementById('toggle-play').className = "toggle-play play";
 		widget.getCurrentSoundIndex(currentSoundIndex => {
-			console.log(currentSoundIndex)
 			document.getElementsByClassName(`slice-${ currentSoundIndex }`)[0].classList.remove("current-sound");
 		});
 		
@@ -106,6 +104,20 @@
 		}
 	});
 
+	document.onkeydown = function(e) {
+		let playButton = document.getElementById('toggle-play');
+		let state = playButton.className;
+		if (e.keyCode === 32) {
+			if (state == "toggle-play play") {
+				widget.play();
+				playButton.className = "toggle-play pause";
+			} else {
+				widget.pause();
+				playButton.className = "toggle-play play";
+			}
+		}
+	};
+
 	document.getElementById('volume-bar').addEventListener('input', function () {
 		widget.setVolume(this.value);
 		document.getElementById('volume').innerHTML = ~~this.value + '%';
@@ -123,8 +135,8 @@ function assignSoundToBlock(widget, finalList, blockElements) {
 			widget.skip(i);
 			widget.seekTo(0);
 			getDuration(widget);
-			console.log(finalList[i]);
-			console.log(finalList[i].title);
+			// console.log(finalList[i]);
+			// console.log(finalList[i].title);
 			blockElements[i].classList.add("current-sound");
 			//set sound title
 			document.getElementById('title').innerHTML = finalList[i].title;
