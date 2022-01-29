@@ -23,7 +23,7 @@
 				}
 			});
 			count++;
-		}, 2000);
+		}, 200);
 
 		//set sound title
 		setTitle(widget);
