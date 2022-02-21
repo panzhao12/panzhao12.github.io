@@ -116,6 +116,10 @@
 		background: transparent;
 	}
 
+	#volume-bar {
+		min-width: 100px;
+	}
+
 	#title {
 		text-align: center;
 		margin-top: 8rem;
@@ -130,6 +134,7 @@
 		height: 3em;
 		margin-top: 2rem;
 		box-sizing: border-box;
+		min-width: 45vh;
 	}
 
 	.aus .progress-bar input[type=range] {
@@ -159,6 +164,7 @@
 	}
 
 	.play, .pause {
+		min-width: 70px;
 		transition: all 0.5s;
 		/* margin-top: 5%; */
 	}
