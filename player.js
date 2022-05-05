@@ -23,7 +23,7 @@
 				}
 			});
 			count++;
-		}, 200);
+		}, 2000);
 
 		//set sound title
 		setTitle(widget);
@@ -126,6 +126,7 @@
 
 function assignSoundToBlock(widget, finalList, blockElements) {
 	// let randomList = [];
+	console.log(finalList)
 
 	for (let i = 0; i < blockElements.length; i++) {
 		// let randomNum = Math.floor(Math.random() * finalList.length);
