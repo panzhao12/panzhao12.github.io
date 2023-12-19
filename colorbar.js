@@ -21,10 +21,10 @@ const colorbar = {
           // = this.elements.volume.style.color
           this.colorBar.value == 0 ? "black" : hsl;
 
-        this.elements.slices.forEach((element) => {
-          element.style.backgroundColor =
-            this.colorBar.value == 0 ? "black" : hsl;
-        });
+        //    this.elements.slices.forEach((element) => {
+        //      element.style.backgroundColor =
+        //        this.colorBar.value == 0 ? "black" : hsl;
+        //    });
       }.bind(this)
     );
   },
