@@ -155,6 +155,7 @@
 	}
 
 	.toggle-play {
+		z-index: 100;
 		width: 8%;
 		cursor: pointer;
 	}
