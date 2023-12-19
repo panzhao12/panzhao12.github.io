@@ -127,6 +127,10 @@
 		font-size: 1.3rem;
 	}
 
+	body.off #title {
+		color: antiquewhite;
+	}
+
 	.progress-bar {
 		display: flex;
 		align-items: center;
@@ -135,10 +139,6 @@
 		margin-top: 2rem;
 		box-sizing: border-box;
 		min-width: 45vh;
-	}
-
-	.aus .progress-bar input[type=range] {
-		background-color: #242526;
 	}
 
 	#volume-bar {
@@ -171,4 +171,8 @@
 
 	.pause {
 		transform: rotate(-180deg);
+	}
+
+	.unselectable {
+		user-select: none;
 	}

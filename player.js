@@ -1,4 +1,10 @@
 (function () {
+  // color the title randomly
+  const hue = (Math.random() * 360).toFixed(0);
+  const hsl = "hsl(" + hue + ", 100%, 50%)";
+  const title = document.getElementById("title");
+  title.style.color = hsl;
+
   const el = document.getElementById("sc-iframe"),
     widget = SC.Widget(el);
   window._total_duration = 0;
@@ -27,17 +33,17 @@
     document.getElementById("volume").innerHTML = ~~this.value + "%";
   });
 
-  //warm up
+  // warm up
   widget.bind(SC.Widget.Events.READY, function () {
     console.log("Getting ready...");
     //set default volume
     widget.setVolume(30);
 
-    //get sound list and assign randomly one sound to each block
+    // get sound list and assign randomly one sound to each block
     let count = 0;
     const getList = setInterval(function () {
       widget.getSounds((soundList) => {
-        //when we get the last sound object or try 5 times, stop fetching
+        // when we get the last sound object or try 5 times, stop fetching
         if (soundList[soundList.length - 1].title != undefined || count == 5) {
           clearInterval(getList);
           assignSoundToBlock(widget, soundList, blockElements);
@@ -46,15 +52,15 @@
       count++;
     }, 2000);
 
-    //set sound title
+    // set sound title
     setTitle(widget);
-    //set sound duration
+    // set sound duration
     getDuration(widget);
   });
 
   widget.bind(SC.Widget.Events.PLAY, function () {
     document.getElementById("toggle-play").className = "toggle-play pause";
-    //highlight current sound block
+    // highlight current sound block
     // console.log(preSoundIndex);
     widget.getCurrentSoundIndex((currentSoundIndex) => {
       if (currentSoundIndex < blockElements.length) {
@@ -168,7 +174,7 @@ function assignSoundToBlock(widget, finalList, blockElements) {
       widget.seekTo(0);
       getDuration(widget);
       blockElements[i].classList.add("current-sound");
-      //set sound title
+      // set sound title
       document.getElementById("title").innerHTML = finalList[i].title;
     });
     blockElements[

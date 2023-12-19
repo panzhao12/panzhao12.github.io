@@ -76,16 +76,16 @@
                </div>
           </div>
           <div class="control-panel">
-               <div class="toggle-play play" id="toggle-play">
+               <div class="toggle-play play unselectable" id="toggle-play">
                     <img class="play-icon" src="./assets/play-arrow.svg" alt="">
                </div>
                <div id="title">Viel Spaß!</div>
                <div class="progress-bar">
-                    <div id="position">00:00</div>
+                    <div id="position" class="unselectable">00:00</div>
                     <input id="player-progress" type="range" min="0" max="100" step="0.1" value="0">
-                    <div id="duration">00:00</div>
+                    <div id="duration"  class="unselectable">00:00</div>
                     <input id="volume-bar" type="range" min="0" max="100" step="0.1" value="30">
-                    <div id='volume'>30%</div>
+                    <div id='volume' class="unselectable">30%</div>
                </div>
           </div>
      </div>
@@ -96,8 +96,8 @@
      <script>
           function toggleLight() {
                const pageBody = document.getElementsByTagName('body')[0];
-               pageBody.getAttribute('class') == "on" ?
-                    pageBody.setAttribute('class', '')
+               pageBody.getAttribute('class') === "on" ?
+                    pageBody.setAttribute('class', 'off')
                     : pageBody.setAttribute('class', 'on');
           }
      </script>
