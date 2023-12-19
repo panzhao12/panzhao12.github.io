@@ -95,7 +95,7 @@
      <script type="text/javascript" src="colorbar.js"></script>
      <script>
           function toggleLight() {
-               let pageBody = document.getElementsByTagName('body')[0];
+               const pageBody = document.getElementsByTagName('body')[0];
                pageBody.getAttribute('class') == "on" ?
                     pageBody.setAttribute('class', '')
                     : pageBody.setAttribute('class', 'on');

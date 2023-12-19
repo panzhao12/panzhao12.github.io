@@ -1,16 +1,16 @@
 (function () {
-  let el = document.getElementById("sc-iframe"),
+  const el = document.getElementById("sc-iframe"),
     widget = SC.Widget(el);
   window._total_duration = 0;
 
   let preSoundIndex = 0;
-  let blockElements = document.getElementsByClassName("slice");
+  const blockElements = document.getElementsByClassName("slice");
 
   // mouse wheel control for volume
   const volumeSlider = document.getElementById("volume-bar");
   volumeSlider.addEventListener("wheel", (e) => {
     if (e.deltaY < 0) {
-      volumeSlider.value += 5;
+      volumeSlider.valueAsNumber += 5;
     } else {
       volumeSlider.value -= 5;
     }
@@ -35,7 +35,7 @@
 
     //get sound list and assign randomly one sound to each block
     let count = 0;
-    let getList = setInterval(function () {
+    const getList = setInterval(function () {
       widget.getSounds((soundList) => {
         //when we get the last sound object or try 5 times, stop fetching
         if (soundList[soundList.length - 1].title != undefined || count == 5) {
@@ -124,7 +124,7 @@
   document
     .getElementById("player-progress")
     .addEventListener("input", function () {
-      let newPos = (this.value * window._total_duration) / 100;
+      const newPos = (this.value * window._total_duration) / 100;
       let seconds = newPos / 1000,
         minutes = Math.floor(seconds / 60);
       seconds = Math.floor(seconds % 60);
@@ -136,8 +136,8 @@
     });
 
   document.getElementById("toggle-play").addEventListener("click", function () {
-    let state = this.className;
-    if (state == "toggle-play play") {
+    const state = this.className;
+    if (state === "toggle-play play") {
       widget.play();
       this.className = "toggle-play pause";
     } else {
@@ -147,10 +147,10 @@
   });
 
   document.onkeydown = function (e) {
-    let playButton = document.getElementById("toggle-play");
-    let state = playButton.className;
+    const playButton = document.getElementById("toggle-play");
+    const state = playButton.className;
     if (e.keyCode === 32) {
-      if (state == "toggle-play play") {
+      if (state === "toggle-play play") {
         widget.play();
         playButton.className = "toggle-play pause";
       } else {
@@ -162,18 +162,11 @@
 })();
 
 function assignSoundToBlock(widget, finalList, blockElements) {
-  // let randomList = [];
-
   for (let i = 0; i < blockElements.length; i++) {
-    // let randomNum = Math.floor(Math.random() * finalList.length);
-    // randomList.push(finalList[randomNum]);
-
     blockElements[i].addEventListener("click", function () {
       widget.skip(i);
       widget.seekTo(0);
       getDuration(widget);
-      // console.log(finalList[i]);
-      // console.log(finalList[i].title);
       blockElements[i].classList.add("current-sound");
       //set sound title
       document.getElementById("title").innerHTML = finalList[i].title;
