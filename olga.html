@@ -77,10 +77,40 @@
           </div>
           <div class="control-panel">
                <div class="toggle-play play unselectable" id="toggle-play">
-                    <img class="play-icon" src="./assets/play-arrow.svg" alt="">
+                    <!-- <object type="image/svg+xml" class="play-icon" data="./assets/play-arrow.svg"></object> -->
+                    <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" height="4.5rem" viewBox="0 0 24 24" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 8.64L15.27 12 10 15.36V8.64M8 5v14l11-7L8 5z"/></svg>
                </div>
                <div id="title">Viel Spaß!</div>
                <div class="progress-bar">
+                    <div id="shuffle-button" class="unselectable">
+                         <svg id="shuffle-icon" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                         height="2.5rem" viewBox="0 0 512.000000 512.000000"
+                         preserveAspectRatio="xMidYMid meet">
+                              <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                              fill="#000000" stroke="none">
+                              <path d="M4092 4143 c-66 -32 -101 -105 -87 -179 5 -30 30 -62 127 -160 l120
+                              -123 -433 -4 c-494 -4 -517 -7 -695 -91 -116 -55 -168 -91 -261 -179 -95 -90
+                              -165 -196 -246 -372 -127 -274 -470 -951 -514 -1013 -87 -122 -232 -215 -385
+                              -246 -65 -14 -171 -16 -675 -16 -571 0 -600 -1 -641 -20 -74 -34 -102 -130
+                              -62 -218 15 -34 29 -47 65 -63 44 -19 62 -20 688 -17 634 4 643 4 727 27 238
+                              64 448 214 573 406 48 76 260 496 457 905 67 140 142 283 166 317 59 83 133
+                              146 229 193 133 65 180 70 621 70 l387 0 -121 -123 c-96 -99 -122 -131 -127
+                              -160 -11 -60 2 -104 45 -147 43 -43 87 -56 147 -45 33 6 76 44 315 283 239
+                              239 277 282 283 315 17 88 14 91 -273 379 -146 147 -280 274 -298 283 -41 19
+                              -90 19 -132 -2z"/>
+                              <path d="M390 3638 c-96 -64 -93 -211 4 -258 41 -19 59 -20 647 -20 679 0 684
+                              -1 825 -71 95 -47 196 -134 253 -218 21 -31 66 -117 101 -191 34 -74 64 -137
+                              66 -139 1 -2 42 75 90 170 l86 174 -27 50 c-140 252 -331 408 -600 492 l-90
+                              28 -660 3 -661 3 -34 -23z"/>
+                              <path d="M2745 2210 l-87 -175 27 -50 c140 -251 333 -409 601 -492 l89 -27
+                              449 -4 449 -3 -121 -122 c-72 -73 -123 -133 -127 -150 -11 -43 0 -112 23 -145
+                              41 -56 139 -80 200 -48 15 8 145 133 289 278 220 221 263 269 272 304 11 40 5
+                              79 -17 121 -15 28 -527 505 -565 526 -112 61 -247 -48 -222 -179 5 -30 30 -62
+                              127 -161 l121 -123 -389 0 c-443 0 -476 4 -613 72 -69 34 -103 59 -171 128
+                              -89 88 -100 107 -210 345 l-37 80 -88 -175z"/>
+                              </g>
+                        </svg>
+                    </div>
                     <div id="position" class="unselectable">00:00</div>
                     <input id="player-progress" type="range" min="0" max="100" step="0.1" value="0">
                     <div id="duration"  class="unselectable">00:00</div>

@@ -1,4 +1,21 @@
 (function () {
+  // shuffle button
+  let shuffle = false;
+  const shuffleButton = document.getElementById("shuffle-button");
+  const shuffleIcon = document.getElementById("shuffle-icon");
+  shuffleButton.addEventListener("click", () => {
+    shuffle = !shuffle;
+    if (shuffle) {
+      shuffleIcon
+        .querySelectorAll("path")
+        .forEach((el) => el.setAttribute("fill", hsl));
+    } else {
+      shuffleIcon
+        .querySelectorAll("path")
+        .forEach((el) => el.setAttribute("fill", "#000000"));
+    }
+  });
+
   // color the title randomly
   const hue = (Math.random() * 360).toFixed(0);
   const hsl = "hsl(" + hue + ", 100%, 50%)";
@@ -34,6 +51,7 @@
   });
 
   // warm up
+  let soundList = [];
   widget.bind(SC.Widget.Events.READY, function () {
     console.log("Getting ready...");
     //set default volume
@@ -42,7 +60,8 @@
     // get sound list and assign randomly one sound to each block
     let count = 0;
     const getList = setInterval(function () {
-      widget.getSounds((soundList) => {
+      widget.getSounds((list) => {
+        soundList = list;
         // when we get the last sound object or try 5 times, stop fetching
         if (soundList[soundList.length - 1].title != undefined || count == 5) {
           clearInterval(getList);
@@ -63,12 +82,12 @@
     // highlight current sound block
     // console.log(preSoundIndex);
     widget.getCurrentSoundIndex((currentSoundIndex) => {
+      if (currentSoundIndex != preSoundIndex) {
+        document
+          .getElementsByClassName(`slice-${preSoundIndex + 1}`)[0]
+          .classList.remove("current-sound");
+      }
       if (currentSoundIndex < blockElements.length) {
-        if (currentSoundIndex != preSoundIndex) {
-          document
-            .getElementsByClassName(`slice-${preSoundIndex + 1}`)[0]
-            .classList.remove("current-sound");
-        }
         document
           .getElementsByClassName(`slice-${currentSoundIndex + 1}`)[0]
           .classList.add("current-sound");
@@ -96,10 +115,15 @@
   widget.bind(SC.Widget.Events.FINISH, () => {
     widget.seekTo(0);
     document.getElementById("toggle-play").className = "toggle-play play";
+    // play random song on the list
+    if (shuffle) {
+      widget.skip(Math.floor(Math.random() * soundList.length));
+    }
     widget.getCurrentSoundIndex((currentSoundIndex) => {
-      document
-        .getElementsByClassName(`slice-${currentSoundIndex}`)[0]
-        .classList.remove("current-sound");
+      const el = document.getElementsByClassName(
+        `slice-${currentSoundIndex}`
+      )[0];
+      if (el) el.classList.remove("current-sound");
     });
   });
 

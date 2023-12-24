@@ -364,4 +364,8 @@ h1 {
   #volume-bar, #volume {
     display: none;
   }
+
+  #shuffle-icon {
+    width: 2rem !important;
+  }
 }
